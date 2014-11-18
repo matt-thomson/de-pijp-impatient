@@ -22,13 +22,15 @@ public class Part1FlowTest {
         outputFile.deleteOnExit();
 
         exit.expectSystemExitWithStatus(0);
+        exit.checkAssertionAfterwards(() -> {
+            List<String> result = Files.readLines(outputFile, Charsets.UTF_8);
+            assertThat(result).containsExactly("one\t1", "two\t2", "three\t3");
+        });
+
         DePijp.main(new String[]{
                 Part1Flow.class.getName(),
                 "src/test/resources/part1.tsv",
                 outputFile.getPath()
         });
-
-        List<String> result = Files.readLines(outputFile, Charsets.UTF_8);
-        assertThat(result).containsExactly("one\t1", "two\t2", "three\t3");
     }
 }
