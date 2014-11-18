@@ -8,7 +8,7 @@ public class Part1Flow implements DePijpFlow {
     @Override
     public void flow(PijpBuilder pijpBuilder, String[] args) {
         pijpBuilder
-                .read(new TsvDePijpTap(args[1], 2))
-                .write(new TsvDePijpTap(args[2], 2));
+                .read(new TsvDePijpTap(args[0], 2))
+                .write(new TsvDePijpTap(args[1], 2));
     }
 }

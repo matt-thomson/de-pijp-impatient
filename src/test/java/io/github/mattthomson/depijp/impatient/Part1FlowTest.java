@@ -29,6 +29,7 @@ public class Part1FlowTest {
 
         DePijp.main(new String[]{
                 Part1Flow.class.getName(),
+                "--local",
                 "src/test/resources/part1.tsv",
                 outputFile.getPath()
         });
