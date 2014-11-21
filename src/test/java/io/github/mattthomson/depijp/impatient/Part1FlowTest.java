@@ -17,7 +17,7 @@ public class Part1FlowTest {
     public final ExpectedSystemExit exit = ExpectedSystemExit.none();
 
     @Test
-    public void shouldRunFlow() throws Exception {
+    public void shouldCopyFile() throws Exception {
         File outputFile = File.createTempFile("output", ".tsv");
         outputFile.deleteOnExit();
 
