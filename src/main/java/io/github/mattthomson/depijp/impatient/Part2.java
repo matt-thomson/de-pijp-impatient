@@ -8,7 +8,7 @@ import io.github.mattthomson.depijp.tap.TsvDePijpTap;
 import java.util.Arrays;
 import java.util.List;
 
-public class Part2Flow implements DePijpFlow {
+public class Part2 implements DePijpFlow {
     @Override
     public void flow(PijpBuilder pijpBuilder, String[] args) {
         pijpBuilder

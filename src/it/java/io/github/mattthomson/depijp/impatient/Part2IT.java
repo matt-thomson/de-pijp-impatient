@@ -10,7 +10,7 @@ import java.util.List;
 import static com.google.common.base.Charsets.UTF_8;
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class Part2FlowIT {
+public class Part2IT {
     @Test
     public void shouldCountWordsInFile() throws IOException {
         File output = new File("target/part2.tsv");

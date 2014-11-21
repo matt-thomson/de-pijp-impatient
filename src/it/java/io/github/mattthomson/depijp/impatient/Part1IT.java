@@ -6,7 +6,7 @@ import org.junit.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class Part1FlowIT {
+public class Part1IT {
     @Test
     public void shouldCopyFile() {
         File input = new File("data/rain.txt");
