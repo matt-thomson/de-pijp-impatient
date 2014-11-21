@@ -1,12 +1,11 @@
 package io.github.mattthomson.depijp.impatient;
 
-import com.google.common.collect.ImmutableList;
 import io.github.mattthomson.depijp.DePijpFlow;
+import io.github.mattthomson.depijp.KeyValue;
 import io.github.mattthomson.depijp.PijpBuilder;
 import io.github.mattthomson.depijp.tap.TsvDePijpTap;
 
 import java.util.Arrays;
-import java.util.List;
 
 public class Part2 implements DePijpFlow {
     @Override
@@ -14,13 +13,10 @@ public class Part2 implements DePijpFlow {
         pijpBuilder
                 .read(new TsvDePijpTap(args[0], 2))
 
-                .map(line -> line.get(1))
-                .flatMap(text -> Arrays.stream(text.split("[ \\[\\]\\(\\),.]")))
-
-                .groupBy(x -> x)
+                .flatMap(line -> Arrays.stream(line.get(1).split("[ \\[\\]\\(\\),.]")))
+                .group()
                 .count()
-
-                .map(kv -> (List<String>) ImmutableList.of(kv.getKey(), kv.getValue().toString()))
+                .map(KeyValue::toStringList)
 
                 .write(new TsvDePijpTap(args[1], 2));
     }
