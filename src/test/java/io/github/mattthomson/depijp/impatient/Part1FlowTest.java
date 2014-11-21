@@ -24,6 +24,7 @@ public class Part1FlowTest {
         exit.expectSystemExitWithStatus(0);
         DePijp.main(new String[]{
                 Part1Flow.class.getName(),
+                "--local",
                 "src/test/resources/part1.tsv",
                 outputFile.getPath()
         });
