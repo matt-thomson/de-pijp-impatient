@@ -16,6 +16,6 @@ public class Part4IT {
         File output = new File("target/part4.tsv");
 
         List<String> result = Files.readLines(output, UTF_8);
-        assertThat(result).contains("mountainous\t1").doesNotContain( "is\t4", "a\t8");
+        assertThat(result).contains("mountainous\t1").doesNotContain("is\t4", "a\t8");
     }
 }
