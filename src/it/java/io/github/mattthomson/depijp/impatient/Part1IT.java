@@ -1,8 +1,8 @@
 package io.github.mattthomson.depijp.impatient;
 
-import java.io.File;
-
 import org.junit.Test;
+
+import java.io.File;
 
 import static org.assertj.core.api.Assertions.assertThat;
 

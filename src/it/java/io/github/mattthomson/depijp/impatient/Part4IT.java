@@ -12,7 +12,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 public class Part4IT {
     @Test
-    public void shouldCountWordsInFile() throws IOException {
+    public void shouldCountWordsInFileRemovingStopWords() throws IOException {
         File output = new File("target/part4.tsv");
 
         List<String> result = Files.readLines(output, UTF_8);

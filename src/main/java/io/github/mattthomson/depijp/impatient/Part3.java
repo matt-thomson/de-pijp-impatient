@@ -1,11 +1,11 @@
 package io.github.mattthomson.depijp.impatient;
 
-import java.util.Arrays;
-
 import io.github.mattthomson.depijp.DePijpFlow;
 import io.github.mattthomson.depijp.KeyValue;
 import io.github.mattthomson.depijp.PijpBuilder;
 import io.github.mattthomson.depijp.tap.TsvDePijpTap;
+
+import java.util.Arrays;
 
 public class Part3 implements DePijpFlow {
     @Override

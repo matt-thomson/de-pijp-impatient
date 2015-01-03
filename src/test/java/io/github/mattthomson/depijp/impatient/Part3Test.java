@@ -1,13 +1,13 @@
 package io.github.mattthomson.depijp.impatient;
 
-import java.io.File;
-import java.util.List;
-
 import com.google.common.io.Files;
 import io.github.mattthomson.depijp.DePijp;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.contrib.java.lang.system.ExpectedSystemExit;
+
+import java.io.File;
+import java.util.List;
 
 import static com.google.common.base.Charsets.UTF_8;
 import static org.assertj.core.api.Assertions.assertThat;

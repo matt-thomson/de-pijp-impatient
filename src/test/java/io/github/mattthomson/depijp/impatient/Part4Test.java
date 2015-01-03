@@ -17,7 +17,7 @@ public class Part4Test {
     public final ExpectedSystemExit exit = ExpectedSystemExit.none();
 
     @Test
-    public void shouldCountWordsInFile() throws Exception {
+    public void shouldCountWordsInFileRemovingStopWords() throws Exception {
         File outputFile = File.createTempFile("output", ".tsv");
         outputFile.deleteOnExit();
 
@@ -30,7 +30,7 @@ public class Part4Test {
         DePijp.main(new String[]{
                 Part4.class.getName(),
                 "--local",
-                "src/test/resources/part3.tsv",
+                "src/test/resources/part4.tsv",
                 "src/test/resources/stop.txt",
                 outputFile.getPath()
         });

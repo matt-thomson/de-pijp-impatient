@@ -25,7 +25,7 @@
         <dependency>
             <groupId>io.github.matt-thomson</groupId>
             <artifactId>de-pijp</artifactId>
-            <version>0.0.4</version>
+            <version>0.0.5-SNAPSHOT</version>
         </dependency>
 
         <dependency>
@@ -140,7 +140,7 @@
                         <argument>run</argument>
                         <argument>-v</argument>
                         <argument>${basedir}:/opt/de-pijp-impatient</argument>
-                        <argument>mattthomson/hadoop-java8:0.1</argument>
+                        <argument>mattthomson/hadoop-java8:0.2</argument>
                         <argument>/opt/de-pijp-impatient/run-it.sh</argument>
                     </arguments>
                 </configuration>

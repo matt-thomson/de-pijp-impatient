@@ -1,11 +1,11 @@
 package io.github.mattthomson.depijp.impatient;
 
+import com.google.common.io.Files;
+import org.junit.Test;
+
 import java.io.File;
 import java.io.IOException;
 import java.util.List;
-
-import com.google.common.io.Files;
-import org.junit.Test;
 
 import static com.google.common.base.Charsets.UTF_8;
 import static org.assertj.core.api.Assertions.assertThat;
