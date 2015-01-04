@@ -11,7 +11,7 @@ import java.util.List;
 public class Part5 implements DePijpFlow {
     @Override
     public void flow(PijpBuilder pijpBuilder, String[] args) {
-        Pijp<List<String>> docs = pijpBuilder.read(new TsvDePijpTap(args[0], 2));
+        Pijp<List<String>> docs = pijpBuilder.read(new TsvDePijpTap(args[0], 2, true));
         Pijp<String> stopWords = pijpBuilder.read(new TextLineDePijpTap(args[1]));
 
         Pijp<Token> tokens = docs

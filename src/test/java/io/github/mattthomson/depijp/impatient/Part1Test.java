@@ -24,7 +24,7 @@ public class Part1Test {
         exit.expectSystemExitWithStatus(0);
         exit.checkAssertionAfterwards(() -> {
             List<String> result = Files.readLines(outputFile, UTF_8);
-            assertThat(result).containsExactly("one\t1", "two\t2", "three\t3");
+            assertThat(result).containsExactly("doc_id\ttext", "one\t1", "two\t2", "three\t3");
         });
 
         DePijp.main(new String[]{

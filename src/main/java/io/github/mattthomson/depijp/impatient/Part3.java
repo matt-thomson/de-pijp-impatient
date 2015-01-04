@@ -11,7 +11,7 @@ public class Part3 implements DePijpFlow {
     @Override
     public void flow(PijpBuilder pijpBuilder, String[] args) {
         pijpBuilder
-                .read(new TsvDePijpTap(args[0], 2))
+                .read(new TsvDePijpTap(args[0], 2, true))
 
                 .flatMap(line -> Arrays.stream(line.get(1).split("[ \\[\\]\\(\\),.]")))
 

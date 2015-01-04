@@ -26,6 +26,7 @@ public class Part5IT {
                 Maps.uniqueIndex(result, line -> JOINER.join(Arrays.copyOfRange(line.split("\t"), 0, 2))),
                 line -> Double.parseDouble(line.split("\t")[2]));
 
-        assertThat(values.get("doc02\train")).isEqualTo(2 * Math.log(6.0 / (4 + 1)));
+        assertThat(values.get("doc02\train")).isEqualTo(2 * Math.log(5.0 / (4 + 1)));
+        assertThat(values.get("doc01\tarea")).isEqualTo(2 * Math.log(5.0 / (3 + 1)));
     }
 }

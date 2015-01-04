@@ -12,7 +12,7 @@ public class Part4 implements DePijpFlow {
         Pijp<String> stopWords = pijpBuilder.read(new TextLineDePijpTap(args[1]));
 
         pijpBuilder
-                .read(new TsvDePijpTap(args[0], 2))
+                .read(new TsvDePijpTap(args[0], 2, true))
 
                 .flatMap(line -> Arrays.stream(line.get(1).split("[ \\[\\]\\(\\),.]")))
 
